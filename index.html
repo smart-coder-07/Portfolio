@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            margin-bottom: 0%;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 225);
+            font-size: 1.2rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+        }
+
+        .leftSection .button {
+            padding: 50px 0px;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+            /* margin: 20px 0; */
+        }
+
+        .purple {
+            color: rgb(157, 38, 157);
+        }
+
+        #element {
+            color: rgb(157, 38, 157);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .image-top {
+            width: 33px;
+            position: relative;
+            top: -39px;
+            left: -15px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 180px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 180px;
+            font-size: 9px;
+        }
+
+        .gray {
+            color: gray;
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            background: #3586ff;
+            min-height: 100px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        footer .social,
+        footer .menu{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        footer .social li,
+        footer .menu li{
+            list-style: none;
+        }
+        footer .social li a{
+            font-size: 2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+        }
+        footer .social li a:hover{
+            transform: translateY(-10px);
+        }
+        footer .menu li a{
+            font-size: 1.2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+            text-decoration: none;
+            opacity: 0.75;
+        }
+        footer .menu li a:hover{
+            color: rgb(58, 33, 41);
+            font-size: 1.2rem;
+        }
+        footer p{
+            color: #fff;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        footer .wave{
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url(wave.png);
+            background-size: 1000px 100px;
+        }
+        footer .wave#wave1{
+            z-index: 1000;
+            opacity: 1;
+            bottom: 0;
+            animation: animateWave 4s linear infinite;
+        }
+        footer .wave#wave2{
+            z-index: 999;
+            opacity: 0.5;
+            bottom: 10px;
+            animation: animateWave_02 4s linear infinite;
+        }
+        footer .wave#wave3{
+            z-index: 1000;
+            opacity: 0.2;
+            bottom: 15px;
+            animation: animateWave 3s linear infinite;
+        }
+        footer .wave#wave4{
+            z-index: 999;
+            opacity: 0.7;
+            bottom: 20px;
+            animation: animateWave_02 3s linear infinite;
+        }
+        @keyframes animateWave{
+            0%
+            {
+                background-position-x: 1000px;
+            }
+            100%{
+                background-position-x: 0px;
+            }
+        }
+        @keyframes animateWave_02{
+            0%
+            {
+                background-position-x: 0px;
+            }
+            100%{
+                background-position-x: 1000px;
+            }
+        }
+    
+
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 20px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Atul's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</li></a>
+                    <li><a href="/">About</li></a>
+                    <li><a href="/">Services</li></a>
+                    <li><a href="/">Projects</li></a>
+                    <li><a href="/">Contact Me</li></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">Hello, I'm <span class="purple">Atul</span>
+                <div>and I am a</div>
+                <span id="element"></span>
+                <div class="button">
+                    <a href="https://drive.google.com/file/d/14w2oNoceIJ4Fc75TEdG5PT9ghmrJ0RYi/view?usp=drive_link"><button class="btn">Download Resume</button></a>
+                    <a href="https://github.com/smart-coder-07"><button class="btn">Visit Github</button></a>
+                </div>
+            </div>
+
+            <div class="rightSection"><img src="bg.png" alt=""></div>
+
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="db.png" alt="">
+                    <div class="vertical-title">
+                        Software Engineer (2023-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque laborum a aliquid
+                        aliquam odio saepe ducimus cupiditate sequi accusamus?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="db.png" alt="">
+                    <div class="vertical-title">
+                        Full Stack Developer (2022-2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque laborum a aliquid
+                        aliquam odio saepe ducimus cupiditate sequi accusamus?
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social">
+            <li><a href="https://www.facebook.com/smart.atul.581"><ion-icon name="logo-facebook"></ion-icon></li></a>
+            <li><a href="https://www.linkedin.com/in/smart1atul/"><ion-icon name="logo-linkedin"></ion-icon></li></a>
+            <li><a href="https://github.com/smart-coder-07"><ion-icon name="logo-github"></ion-icon></li></a>
+            <li><a href="https://www.instagram.com/smart1atul/?hl=en"><ion-icon name="logo-instagram"></ion-icon></li></a>
+        </ul>
+        <ul class="menu">
+            <li><a href="#">Home</li></a>
+            <li><a href="#">About</li></a>
+            <li><a href="#">Services</li></a>
+            <li><a href="#">Projects</li></a>
+            <li><a href="#">Contact Me</li></a>
+        </ul>
+        <p>&copy; 2023 Atul Tiwari | All Right Reserved</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Full Stack Developer.', 'Graphics Designer.', 'DevOps Engineer', 'Coder...'],
+            typeSpeed: 100,
+        });
+    </script>
+</body>
+
+</html>
